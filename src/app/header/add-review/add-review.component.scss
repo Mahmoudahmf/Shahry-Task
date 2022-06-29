@@ -1,0 +1,143 @@
+.add-review-btn {
+  width: 200px;
+  margin: 35px auto;
+
+  button {
+    color: #44ceaa;
+    background-color: white;
+    padding: 12px 50px;
+    border-radius: 3px;
+    border: transparent;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+
+  }
+}
+
+.popup-item-container{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom:0px;
+  left: 0px;
+  background-color: rgb(0, 0, 0);
+  opacity: .5;
+  z-index: 1;
+}
+
+
+
+.add-review-content {
+  background-color: white;
+  width: 750px;
+  height: 380px;
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+  .title {
+    display: flex;
+    width: 100%;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d3dadc;
+
+    i{
+      font-size: large;
+      cursor: pointer;
+      color: #dadada;
+    }
+
+  }
+
+  .rate {
+
+    padding: 12px 30px 0px;
+    height: 67px;
+
+
+
+    p{
+      font-size: 13px;
+      font-weight: bold;
+      word-wrap: break-word;
+
+    }
+
+    .rate-icons{
+      width: 120px;
+      display: inline-block;
+      height: 45px;
+
+
+    }
+
+  }
+
+  .review-title {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px;
+
+    label{
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    input {
+      background-color: #ebf0f2;
+      border: 1px solid #dbdcdc;
+      height: 35px;
+      padding-left: 10px;
+      margin-top: 5px;
+    }
+  }
+
+  .review-details {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #d3dadc;
+
+    label{
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    textarea {
+      background-color: #ebf0f2;
+      border: 1px solid #dbdcdc;
+      padding-top: 10px;
+      padding-left: 10px;
+      resize: none;
+      margin-top: 5px;
+    }
+
+  }
+
+
+  .add-btn {
+
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 17px 30px;
+
+
+    button {
+      background-color: #00be8e;
+      color: white;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      padding: 10px 35px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+  }
+
+}

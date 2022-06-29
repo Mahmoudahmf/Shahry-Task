@@ -1,0 +1,33 @@
+nav{
+  display: flex;
+  align-items: center;
+  width: 95%;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: white;
+  padding: .5rem 7rem;
+
+  .icon{
+    .main-icon{
+      height: 55px;
+    }
+  }
+
+ .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15.2rem;
+
+  .main-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  span{
+    font-size:x-large;
+  }
+ }
+
+}

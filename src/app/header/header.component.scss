@@ -1,0 +1,34 @@
+.header-section{
+  height: 70vh;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 95%;
+
+
+  &::after{
+    content: "";
+    top: 65px;
+    position: absolute;
+    bottom: 50px;
+    right: 37px;
+    left: 37px;
+    z-index: -1;
+    height: 71vh;
+    background: url(../../assets/header.jpg) no-repeat;
+    width: 95%;
+    margin: 0 auto;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  h1{
+    margin: auto;
+    width: 66vw;
+    color: white;
+    padding-top: 100px;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+
+}

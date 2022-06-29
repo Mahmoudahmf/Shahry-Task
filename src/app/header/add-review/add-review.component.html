@@ -1,0 +1,43 @@
+<div class="add-review-btn" *ngIf="this.isAddReviewBtn" #ref>
+  <button (click)="onAddReviewbtnClicked()">ADD A REVIEW</button>
+</div>
+
+<div class="popup-item-container" *ngIf="this.isPopup" (click)="onCancelAddReview()">
+
+</div>
+
+<form [formGroup]="reviewForm">
+  <div class="add-review-content" *ngIf="this.isPopup" #ref2>
+
+    <div>
+
+
+      <div class="title">
+        <h3>ADD A REVIEW</h3>
+        <i class="fa-solid fa-x" (click)="onCancelAddReview()"></i>
+      </div>
+
+      <div class="rate">
+
+        <p>RATING</p>
+        <div class="rate-icons">
+          <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+        </div>
+      </div>
+
+      <div class="review-title">
+        <label for="id1">REVIEW TITLE</label>
+        <input formControlName="title" type="text" id="id1">
+      </div>
+
+      <div class="review-details">
+        <label for="id2">REVIEW DETAILS</label>
+        <textarea formControlName="content" id="id2" cols="30" rows="5"></textarea>
+      </div>
+
+      <div class="add-btn">
+        <button (click)="addReview()">ADD REVIEW </button>
+      </div>
+    </div>
+  </div>
+</form>

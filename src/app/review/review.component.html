@@ -1,0 +1,72 @@
+<div class="content" *ngIf="reviews.length">
+
+  <div class="review-content" *ngFor="let review of reviews">
+    <div class="profile-img">
+      <img [src]='review.user?.picture.large' alt="">
+    </div>
+    <div class="name">
+      <p>{{review.user?.name.title}} {{review.user?.name.first}} {{review.user?.name.last}}
+      </p>
+    </div>
+    <div class="date">
+      <p>{{review?.date}}</p>
+    </div>
+    <div class="comment">
+      <h2>{{review?.title}}</h2>
+    </div>
+    <div class="rate-content">
+
+      <div>
+
+        <div class="like" *ngIf="this.review.rating > 3 ? isRateLike : '' ">
+          <i class="fa-solid fa-thumbs-up "></i>
+
+        </div>
+        <div class="disLike" *ngIf="this.review.rating <= 3 ? isRatedislike : '' ">
+          <i class="fa-solid fa-thumbs-down "></i>
+        </div>
+      </div>
+
+      <span>
+        <ngx-star-rating id="'rating'" [ngModel]="review.rating" [disabled]="true"></ngx-star-rating>
+      </span>
+
+      <div>
+        {{review.rating }}/5
+      </div>
+    </div>
+    <div class="p">
+      <p>
+        {{review?.content}}
+      </p>
+    </div>
+
+    <div class="add-comment-btn"  *ngIf="!review?.comments.length && !mainAddCommentBtn">
+      <button (click)="viewTextarea()">ADD COMMENT</button>
+    </div>
+
+    <div class="comment-textarea" *ngIf="!review?.comments.length && addCommentTextarea">
+      <h6>YOUR COMMENT</h6>
+      <textarea [formControl]="commentFormControl" name="" id="" cols="30" rows="10">
+
+      </textarea>
+
+      <div class="add-comment-btn  main-add-comment">
+        <button (click)="addComment(review.id)">ADD COMMENT</button>
+      </div>
+    </div>
+
+    <div class="base-comment" *ngIf="review?.comments?.length">
+
+      <div class="comment-textarea-content" *ngFor="let comment of review?.comments">
+        <p>
+          {{comment?.message}}
+        </p>
+        <div class="comment-image">
+          <img [src]='review.user?.picture.large' alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
